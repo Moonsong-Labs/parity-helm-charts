@@ -40,6 +40,8 @@ helm install bridges-common-relay parity/bridges-common-relay
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | affinity | object | `{}` | Assign custom affinity rules |
+| config | object | `{"name":""}` | Config file will be mounted to pod /configs/{name} |  
+| config.name | string | `""` | Config filename |
 | env | object | `{}` | Set environment variables |
 | existingSecretName | string | `""` | Override secrets with already existing secret name. |
 | extraArgs | list | `[]` | Set extra command line arguments |
