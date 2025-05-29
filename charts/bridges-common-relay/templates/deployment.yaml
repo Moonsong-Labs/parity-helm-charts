@@ -64,17 +64,34 @@ spec:
           {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-          {{- if or .Values.secrets .Values.existingSecretName }}
+          {{- if or .Values.config .Values.secrets .Values.existingSecretName }}
           volumeMounts:
+          {{- if .Values.config }}
+          - name: config
+            mountPath: "/configs/{{ .Values.config.name }}"
+            subPath: {{ .Values.config.name }}
+            readOnly: true
+          {{- end }}
+          {{- if or .Values.secrets .Values.existingSecretName }}
           - name: secrets
             mountPath: "/secrets"
             readOnly: true
+          {{- end }}
+          {{- end }}
+      {{- if or .Values.config .Values.secrets .Values.existingSecretName }}
       volumes:
+      {{- if .Values.config }}
+      - name: config
+        configMap:
+          name: {{ include "bridges-common-relay.fullname" . }}-config
+      {{- end }}
+      {{- if or .Values.secrets .Values.existingSecretName }}
       - name: secrets
         secret:
           secretName: {{ include "bridges-common-relay.secretName" . }}
           optional: false
-          {{- end}}
+      {{- end }}
+      {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
