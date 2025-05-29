@@ -44,6 +44,9 @@ secrets: {}
 # -- Override secrets with already existing secret name.
 existingSecretName: ""
 
+# -- Set secret subpath
+secretSubPath: ""
+
 # -- Set environment variables
 env: {}
   # RUST_LOG: 'runtime=trace'
