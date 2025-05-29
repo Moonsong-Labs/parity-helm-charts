@@ -2,9 +2,9 @@ apiVersion: v1
 entries:
   bridges-common-relay:
   - apiVersion: v2
-    created: "2025-05-29T16:43:30.436148+02:00"
+    created: "2025-05-29T17:35:06.123732+02:00"
     description: A Helm chart for bridges-common-relay
-    digest: 7f92854e6f0206371de09e36e125855d4c9df0612b0d5036fb51f9950cddb0c8
+    digest: 68a6b68a68c1fe8adfcceee70ae1faffa537bc212198c6394b0650dcdbdacd15
     maintainers:
     - email: devops+helm@parity.io
       name: Parity
@@ -12,13 +12,13 @@ entries:
     name: bridges-common-relay
     type: application
     urls:
-    - https://github.com/Moonsong-Labs/parity-helm-charts/bridges-common-relay-1.1.1.tgz
+    - https://moonsong-labs.github.io/parity-helm-charts/bridges-common-relay-1.1.1.tgz
     version: 1.1.1
   node:
   - apiVersion: v2
-    created: "2025-05-29T16:43:30.437236+02:00"
+    created: "2025-05-29T17:35:06.125013+02:00"
     description: A Helm chart to deploy Substrate/Polkadot nodes
-    digest: 27abfcdf62729b388d73bc62b1d27bb2f0cd93e551e3d8182430da76209da39d
+    digest: 9b8af56fb29df27b7824078b1ccfaa3c79efae8a8090754cb75c1c500044076c
     maintainers:
     - email: devops+helm@parity.io
       name: Parity
@@ -26,6 +26,6 @@ entries:
     name: node
     type: application
     urls:
-    - https://github.com/Moonsong-Labs/parity-helm-charts/node-5.15.0.tgz
+    - https://moonsong-labs.github.io/parity-helm-charts/node-5.15.0.tgz
     version: 5.15.0
-generated: "2025-05-29T16:43:30.435484+02:00"
+generated: "2025-05-29T17:35:06.123049+02:00"
