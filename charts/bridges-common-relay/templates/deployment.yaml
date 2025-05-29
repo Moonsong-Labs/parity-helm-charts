@@ -75,6 +75,7 @@ spec:
           {{- if or .Values.secrets .Values.existingSecretName }}
           - name: secrets
             mountPath: "/secrets"
+            subPath: "{{ .Values.secretSubPath }}"
             readOnly: true
           {{- end }}
           {{- end }}

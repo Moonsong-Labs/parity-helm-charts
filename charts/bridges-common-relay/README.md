@@ -63,6 +63,7 @@ helm install bridges-common-relay parity/bridges-common-relay
 | resources | object | `{}` | Resource limits & requests |
 | rewards | object | `{}` | CronJobs to automatically claim relayer rewards |
 | secrets | object | `{}` | Secrets will be mounted to pod /secrets/{key} |
+| secretSubPath | string | `""` | Set secret subPath |
 | securityContext | object | `{}` | SecurityContext holds pod-level security attributes and common container settings. |
 | service | object | `{"port":80,"type":"ClusterIP"}` | Service |
 | service.port | int | `80` | Service port |
